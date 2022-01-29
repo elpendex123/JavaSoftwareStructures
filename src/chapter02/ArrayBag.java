@@ -5,7 +5,6 @@ import java.util.NoSuchElementException;
 import java.util.Random;
 
 public class ArrayBag implements BagADT {
-
     private static Random rand = new Random();
     private final int DEFAULT_CAPACITY = 100;
     private final int NOT_FOUND = -1;
