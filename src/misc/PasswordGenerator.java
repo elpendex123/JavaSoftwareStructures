@@ -21,12 +21,12 @@ public class PasswordGenerator {
 
     public String myRandom(String input, int length)
     {
-        StringBuffer stringBuffer = new StringBuffer();
+        StringBuilder stringBuilder = new StringBuilder();
         Random random = new Random();
 
         for (int i = 0; i < length; i++)
-            stringBuffer.append(input.charAt(random.nextInt(input.length())));
+            stringBuilder.append(input.charAt(random.nextInt(input.length())));
 
-        return stringBuffer.toString();
+        return stringBuilder.toString();
     }
 }
