@@ -103,6 +103,7 @@ public class ArrayBag implements BagADT {
         return (search != NOT_FOUND);
     }
 
+    @SuppressWarnings("rawtypes")
     @Override
     public boolean equals(BagADT bag) throws EmptyBagException {
         boolean result = false;
@@ -141,6 +142,7 @@ public class ArrayBag implements BagADT {
         return count;
     }
 
+    @SuppressWarnings("rawtypes")
     @Override
     public Iterator iterator() {
         return new ArrayIterator(contents, count);
