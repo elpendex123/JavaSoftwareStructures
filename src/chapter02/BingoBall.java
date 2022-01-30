@@ -1,8 +1,8 @@
 package chapter02;
 
 public class BingoBall {
-    private char letter;
-    private int number;
+    private final char letter;
+    private final int number;
 
     public BingoBall(int num) {
         number = num;
