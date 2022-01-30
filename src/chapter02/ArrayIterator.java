@@ -3,6 +3,7 @@ package chapter02;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
+@SuppressWarnings("ALL")
 public class ArrayIterator implements Iterator {
 
     private int count;
