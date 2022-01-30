@@ -10,14 +10,14 @@ import java.util.Random;
 // Add a method call isFull() that returns true if the bag is full.
 // Add a method to expand the capacity by a particular number of cells.
 public class ArrayBagModified implements BagADT {
-    private static Random rand = new Random();
-    private final int DEFAULT_CAPACITY = 100;
+    private static final Random rand = new Random();
     private final int NOT_FOUND = -1;
     private int count;
     private Object[] contents;
 
     public ArrayBagModified() {
         count = 0;
+        int DEFAULT_CAPACITY = 100;
         contents = new Object[DEFAULT_CAPACITY];
     }
 
@@ -35,6 +35,7 @@ public class ArrayBagModified implements BagADT {
         count++;
     }
 
+    @SuppressWarnings("rawtypes")
     public void addAll(BagADT bag) {
         Iterator scan = bag.iterator();
 
@@ -80,6 +81,7 @@ public class ArrayBagModified implements BagADT {
         return result;
     }
 
+    @SuppressWarnings("rawtypes")
     @Override
     public BagADT union(BagADT bag) {
         ArrayBagModified both = new ArrayBagModified();
@@ -108,6 +110,7 @@ public class ArrayBagModified implements BagADT {
         return (search != NOT_FOUND);
     }
 
+    @SuppressWarnings("rawtypes")
     @Override
     public boolean equals(BagADT bag) throws EmptyBagException {
         boolean result = false;
@@ -146,6 +149,7 @@ public class ArrayBagModified implements BagADT {
         return count;
     }
 
+    @SuppressWarnings("rawtypes")
     @Override
     public Iterator iterator() {
         return new ArrayIterator(contents, count);

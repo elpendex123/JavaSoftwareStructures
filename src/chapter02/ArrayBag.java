@@ -5,14 +5,14 @@ import java.util.NoSuchElementException;
 import java.util.Random;
 
 public class ArrayBag implements BagADT {
-    private static Random rand = new Random();
-    private final int DEFAULT_CAPACITY = 100;
+    private static final Random rand = new Random();
     private final int NOT_FOUND = -1;
     private int count;
     private Object[] contents;
 
     public ArrayBag() {
         count = 0;
+        int DEFAULT_CAPACITY = 100;
         contents = new Object[DEFAULT_CAPACITY];
     }
 
@@ -30,6 +30,7 @@ public class ArrayBag implements BagADT {
         count++;
     }
 
+    @SuppressWarnings("rawtypes")
     public void addAll(BagADT bag) {
         Iterator scan = bag.iterator();
 
@@ -75,6 +76,7 @@ public class ArrayBag implements BagADT {
         return result;
     }
 
+    @SuppressWarnings("rawtypes")
     @Override
     public BagADT union(BagADT bag) {
         ArrayBag both = new ArrayBag();
@@ -161,8 +163,7 @@ public class ArrayBag implements BagADT {
     private void expandCapacity() {
         Object[] larger = new Object[contents.length * 2];
 
-        for (int index = 0; index < contents.length; index++)
-            larger[index] = contents[index];
+        System.arraycopy(contents, 0, larger, 0, contents.length);
 
         contents = larger;
     }
