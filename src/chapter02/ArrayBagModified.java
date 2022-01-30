@@ -153,12 +153,12 @@ public class ArrayBagModified implements BagADT {
 
     @Override
     public String toString() {
-        String result = "";
+        StringBuilder result = new StringBuilder();
 
         for (int index = 0; index < count; index++)
-            result = result + contents[index].toString() + "\n";
+            result.append(contents[index].toString()).append("\n");
 
-        return result;
+        return result.toString();
     }
 
     private void expandCapacity() {
