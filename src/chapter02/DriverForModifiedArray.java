@@ -27,7 +27,7 @@ public class DriverForModifiedArray {
         arrayBagModified.addAll(arrayBagModified2);
 
         try {
-            arrayBagModified.equals(arrayBagModified2);
+            System.out.println("Does am1 equal am2 after am2 is added to am1: " + arrayBagModified.equals(arrayBagModified2));
         } catch (EmptyBagException e) {
             e.printStackTrace();
         }
