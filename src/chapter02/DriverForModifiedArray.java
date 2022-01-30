@@ -42,10 +42,7 @@ public class DriverForModifiedArray {
         try {
             arrayBagModifiedUnion.remove(1);
         } catch (EmptyBagException e) {
-            System.out.println("Message: " + e.getMessage());
-            System.out.println("Before printStackTrace");
-            e.printStackTrace();
-            System.out.println("After printStackTrace\n");
+            System.out.println("Message: " + e.getMessage() + "\n");
         }
 
         System.out.println("The union of am1 and am2");
