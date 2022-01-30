@@ -62,7 +62,7 @@ public class ArrayBagModified implements BagADT {
         int search = NOT_FOUND;
 
         if (isEmpty())
-            throw new EmptyBagException();
+            throw new EmptyBagException("Bag is already empty");
 
         for (int index = 0; index < count && search == NOT_FOUND; index++) {
             if (contents[index].equals(target)) {

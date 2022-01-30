@@ -1,13 +1,14 @@
 package chapter02;
 
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 public interface BagADT {
     void add(Object element);
 
     Object removeRandom() throws EmptyBagException;
 
-    Object remove(Object element) throws EmptyBagException;
+    Object remove(Object element) throws EmptyBagException, NoSuchElementException;
 
     BagADT union(BagADT set);
 
