@@ -164,8 +164,7 @@ public class ArrayBagModified implements BagADT {
     private void expandCapacity() {
         Object[] larger = new Object[contents.length * 2];
 
-        for (int index = 0; index < contents.length; index++)
-            larger[index] = contents[index];
+        System.arraycopy(contents, 0, larger, 0, contents.length);
 
         contents = larger;
     }
