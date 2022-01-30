@@ -3,23 +3,24 @@ package chapter02;
 import java.util.Iterator;
 
 public interface BagADT {
-    public void add(Object element);
+    void add(Object element);
 
-    public Object removeRandom() throws EmptyBagException;
+    Object removeRandom() throws EmptyBagException;
 
-    public Object remove(Object element) throws EmptyBagException;
+    Object remove(Object element) throws EmptyBagException;
 
-    public BagADT union(BagADT set);
+    BagADT union(BagADT set);
 
-    public boolean contains(Object target);
+    boolean contains(Object target);
 
-    public boolean equals(BagADT bag) throws EmptyBagException;
+    boolean equals(BagADT bag) throws EmptyBagException;
 
-    public boolean isEmpty();
+    boolean isEmpty();
 
-    public int size();
+    int size();
 
-    public Iterator iterator();
+    @SuppressWarnings("rawtypes")
+    Iterator iterator();
 
-    public String toString();
+    String toString();
 }
